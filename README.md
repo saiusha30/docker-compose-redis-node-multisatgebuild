@@ -6,26 +6,18 @@ A simple Redis-powered Node.js application containerized with Docker and orchest
 Table of Contents
 
 * Project Overview
-
+* Clone the project
 * Folder Structure
-
 * Tech Stack
-
 * Prerequisites
-
 * Installation
-
 * Usage
-
-* Environment Variables
-
 * Docker Details
-
-* API Endpoint
-
 * Troubleshooting
 
-* License
+Clone the project
+https://github.com/saiusha30/docker-compose-redis-node-multisatgebuild.git
+cd docker-project
 
 Folder Structure
 docker-project/
