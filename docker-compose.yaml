@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+    depends_on:
+      - redis
+    env_file:
+      - .env
+    networks:
+      - my-network
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data     # <- Redis persistence
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  redisdata:  # 👈 named volume for Redis persistence
+
